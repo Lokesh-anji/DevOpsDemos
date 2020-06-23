@@ -50,7 +50,7 @@
     ```
 1. Create kubernetes cluser
     ```sh 
-      kops update cluster dev.k8s.valaxy.in --yes
+      kops update cluster dev.k8s.lokesh.in --yes --state=s3://dev.k8s.lokesh.in --yes
      ```
 1. Validate your cluster 
      ```sh 
