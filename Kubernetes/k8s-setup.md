@@ -11,6 +11,7 @@
     #sudo apt-get install unzip - if you dont have unzip in your system
     ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
     ```
+    How to install AWS CLI on Ubuntu 18.04?----https://www.osradar.com/install-aws-cli-ubuntu-18-04/
     
 1. Install kubectl
    ```sh
