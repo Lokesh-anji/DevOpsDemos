@@ -71,6 +71,9 @@
 1. Deploying Nginx Container
     ```sh 
       kubectl run sample-nginx --image=nginx --replicas=2 --port=80
+      
+      kubectl run --generator=run-pod/v1 sample-nginx --image=nginx:1.16 --replicas=2 --port=80
+      
       kubectl get pods
       kubectl get deployments
    ```
@@ -78,9 +81,11 @@
 1. Expose the deployment as service. This will create an ELB in front of those 2 containers and allow us to publicly access them:
    ```sh 
     kubectl expose deployment sample-nginx --port=80 --type=LoadBalancer
+    
     kubectl get services -o wide
     ```
  1. To delete cluster
     ```sh
      kops delete cluster dev.k8s.valaxy.in --yes
     ```
+     kops delete cluster dev.k8s.lokesh.in --yes --state=s3://dev.k8s.lokesh.in --yes
