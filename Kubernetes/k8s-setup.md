@@ -62,7 +62,11 @@
    ```sh 
      kubectl get nodes 
    ```
-
+3.To login to the master node.
+  #ls -la
+  #cd .ssh
+  #ssh -i id_rsa @publicIP
+  
 #### Deploying Nginx container on Kubernetes 
 1. Deploying Nginx Container
     ```sh 
